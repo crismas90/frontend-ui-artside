@@ -53,7 +53,6 @@ body {
 .left-sidebar {
 	float: left;
 	width: 350px;
-	margin-left: -100%;
 	position: relative;
 	background: #B5E3FF;
 }
