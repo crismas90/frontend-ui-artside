@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'DINLightAlternateRegular';
+    src: url('fonts/DINLightAlternateRegular.eot');
+    src: url('fonts/DINLightAlternateRegular.eot') format('embedded-opentype'),
+         url('fonts/DINLightAlternateRegular.woff2') format('woff2'),
+         url('fonts/DINLightAlternateRegular.woff') format('woff'),
+         url('fonts/DINLightAlternateRegular.ttf') format('truetype'),
+         url('fonts/DINLightAlternateRegular.svg#DINLightAlternateRegular') format('svg');
+}
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font-family: 'DINLightAlternateRegular';
+	background-image: url(../gallery/bg-body.jpg);
+	width: 100%;
+	height: 100%;
+}
+img {
+	display: block;
+}
+h1,h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	color: #707070;
+}
+p {
+	font-family: 'Verdana';
+	font-size: 11px;
+	line-height: 15px;
+	margin-bottom: 15px;
+	color: #363636;
+}
+a {
+	font-family: 'DINLightAlternateRegular';
+	text-decoration: none;
+	color: #707070;
+}
+strong {
+	font-weight: bold;
+}
+.wrapper {
+	max-width: 1200px;
+	min-width: 1024px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	position: relative;
+	margin: 50px 0 100px 0;
+}
+address,
+address span {
+	display: block;
+	color: #707070;
+}
+.header>address a {
+	font-size: 30px;
+	line-height: 26px;
+	font-weight: normal;
+}
+.header>address span {
+	font-size: 18px;
+}
+.header>address {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+	padding: 0 0 0 350px; 
+	position: relative;
+}
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+.list {
+	display: inline-block;
+	margin-right: 70px;
+}
+.list img,
+.list p{
+	float: left;
+}
+.list p {
+	vertical-align: top;
+	white-space: pre-line;
+}
+.list img {
+	clear: both;
+	margin: 0 10px 20px 0;
+}
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+	font-size: 40px;
+	line-height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+}
+.left-sidebar a:hover {
+	background: #717171;
+	color: #ffffff;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	height: 100px;
+	max-width: 1200px;
+	min-width: 1024px;
+	margin: -100px auto 0;
+	position: relative;
+}
+.footer address {
+	float: left;
+	padding-right: 20px;
+}
