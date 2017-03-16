@@ -44,6 +44,7 @@ strong {
 	font-weight: bold;
 }
 .wrapper {
+	position: relative;
 	max-width: 1200px;
 	min-width: 1024px;
 	margin: 0 auto;
@@ -57,20 +58,22 @@ strong {
 	position: relative;
 	margin: 50px 0 100px 0;
 }
-address,
-address span {
+.phone,
+.phone span,
+.site_block ,
+.site_block span{
 	display: block;
 	color: #707070;
 }
-.header>address a {
+.phone a {
 	font-size: 30px;
 	line-height: 26px;
 	font-weight: normal;
 }
-.header>address span {
+.phone span {
 	font-size: 18px;
 }
-.header>address {
+.phone a {
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -80,6 +83,7 @@ address span {
 .middle {
 	padding: 0 0 0 350px; 
 	position: relative;
+	min-height: 100%;
 }
 .container {
 	width: 100%;
@@ -88,20 +92,27 @@ address span {
 }
 .list {
 	display: inline-block;
-	margin-right: 70px;
+	margin-right: 0px;
 }
-.list img,
-.list p{
-	float: left;
+.list-img {
+	width: 200px;
+	overflow: hidden;
 }
-.list p {
+.img-box {
+
+	height: 78px;
+	width: 78px;
+	margin: 0 10px 20px 0;
+}
+.img-box img {
+	height: 100%;
+	width: 100%;
+}
+.list-img p {
 	vertical-align: top;
 	white-space: pre-line;
 }
-.list img {
-	clear: both;
-	margin: 0 10px 20px 0;
-}
+
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
@@ -124,8 +135,12 @@ address span {
 	min-width: 1024px;
 	margin: -100px auto 0;
 	position: relative;
+	/*background: #fff;*/
 }
-.footer address {
+.site_block {
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
 	float: left;
 	padding-right: 20px;
 }
