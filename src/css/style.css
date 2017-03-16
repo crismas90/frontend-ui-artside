@@ -37,7 +37,6 @@ p {
 }
 a {
 	font-family: 'DINLightAlternateRegular';
-	text-decoration: none;
 	color: #707070;
 }
 strong {
@@ -67,6 +66,7 @@ strong {
 	font-size: 30px;
 	line-height: 26px;
 	font-weight: normal;
+	text-decoration: none;
 }
 .phone span {
 	font-size: 18px;
@@ -82,11 +82,12 @@ strong {
 	padding: 0 0 0 350px; 
 	position: relative;
 	min-height: 100%;
-	padding-bottom: 90px;
+
 }
 .container {
 	float: left;
 	overflow: hidden;
+	padding-bottom: 100px;
 }
 
 
@@ -131,21 +132,28 @@ strong {
 	background: #717171;
 	color: #ffffff;
 }
+.left-sidebar a{
+	text-decoration: none;
+}
+
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	display: inline-block;
+	display:inline-block;
 	position: relative;
-	max-width: 1200px;
-	min-width: 1024px;
-	margin: 0 auto ;
+	max-width: 100%;
+	min-width: 100%;
+	margin: -100px auto 0;
 	border-top: 1px solid rgba(171, 171, 171, 0.5); 
-	background: #fff;
 	line-height: 1.364;
+	padding: 40px 0 30px 0;
 }
 .footer_block {
 	float: left;
 	padding-right: 20px;
+}
+.footer_link {
+	text-decoration: inherit;
 }
 
 
