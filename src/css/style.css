@@ -19,9 +19,9 @@ body {
 	width: 100%;
 	height: 100%;
 }
-img {
+/*img {
 	display: block;
-}
+}*/
 h1,h2 {
 	font-size: 18px;
 	text-transform: uppercase;
@@ -86,29 +86,34 @@ strong {
 	min-height: 100%;
 }
 .container {
-	width: 100%;
 	float: left;
 	overflow: hidden;
 }
+
 .list {
 	display: inline-block;
-	margin-right: 0px;
+	margin: 0 50px 15px 0;
 }
 .list-img {
-	width: 200px;
+	float: left;
+	min-width: 200px;
+	max-width: 235px;
 	overflow: hidden;
+	background: #fff;
+	margin-bottom: 20px;
 }
 .img-box {
-
+	float: left;
 	height: 78px;
 	width: 78px;
-	margin: 0 10px 20px 0;
+	margin-rihgt:10px;
 }
 .img-box img {
 	height: 100%;
 	width: 100%;
 }
 .list-img p {
+	padding-left: 88px;
 	vertical-align: top;
 	white-space: pre-line;
 }
