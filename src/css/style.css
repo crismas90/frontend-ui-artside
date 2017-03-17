@@ -20,7 +20,7 @@
 html {
 	height: 100%;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, img {
 	display: block;
 }
 body {
@@ -129,7 +129,9 @@ strong {
 }
 .menulist {
 	position: relative;
+	overflow: auto;
 	min-height: 320px;
+	max-height: 600px;
 	padding-bottom: 50px;
 }
 .menulist>.list1,
@@ -154,20 +156,24 @@ strong {
 	margin-bottom: 20px;
 }
 .img-box {
+	position: relative;
 	height: 78px;
 	width: 78px;
 	margin-rihgt:10px;
+	background: #363636;
 }
 .img-box img {
-	height: 100%;
-	width: 100%;
+ 	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto ;
 }
 .name {
 	width:160px;
 	vertical-align: top;
 	white-space: pre-line;
 	font-size: 11px;
-	line-height: auto;
 }
 
 /* Left Sidebar
