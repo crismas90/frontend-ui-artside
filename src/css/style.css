@@ -7,7 +7,16 @@
          url('fonts/DINLightAlternateRegular.ttf') format('truetype'),
          url('fonts/DINLightAlternateRegular.svg#DINLightAlternateRegular') format('svg');
 }
-body,
+@font-face {
+    font-family: 'DINCyrRegular';
+    src: url('fonts/DINCyrRegular.eot');
+    src: url('fonts/DINCyrRegular.eot') format('embedded-opentype'),
+         url('fonts/DINCyrRegular.woff2') format('woff2'),
+         url('fonts/DINCyrRegular.woff') format('woff'),
+         url('fonts/DINCyrRegular.ttf') format('truetype'),
+         url('fonts/DINCyrRegular.svg#DINCyrRegular') format('svg');
+}
+
 html {
 	height: 100%;
 }
@@ -15,12 +24,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 body {
-	font-family: 'DINLightAlternateRegular';
+	font-family:"Verdana";
 	background-image: url(../gallery/bg-body.jpg);
 	width: 100%;
+	height: 100%;
 }
-img {
-	display: block;
+h1,h2,a {
+	font-family: 'DINLightAlternateRegular';
+	color: rgb( 54, 54, 54 );
 }
 h1,h2 {
 	font-size: 18px;
@@ -29,7 +40,6 @@ h1,h2 {
 	color: #707070;
 }
 p {
-	font-family: 'Verdana';
 	font-size: 11px;
 	line-height: 15px;
 	margin-bottom: 15px;
@@ -42,18 +52,23 @@ strong {
 	font-weight: bold;
 }
 .wrapper {
-	position: relative;
-	max-width: 1200px;
 	min-width: 1024px;
+	max-width: 1200px;
 	margin: 0 auto;
 	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 }
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	position: relative;
-	margin: 50px 0 100px 0;
+	height: 150px;
 }
+.header {
+	position: relative;
+	margin-bottom: 50px;
+}
+.logo,
 .phone,
 .phone span,
 .footer_block ,
@@ -61,10 +76,13 @@ strong {
 	display: block;
 	color: #707070;
 }
-.phone a {
+.phone {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	padding-bottom: 50px;
+}
+.phone a {
 	font-size: 30px;
 	line-height: 26px;
 	font-weight: normal;
@@ -73,34 +91,69 @@ strong {
 .phone span {
 	font-size: 18px;
 }
-
+.logo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-bottom: 50px;
+}
 /* Middle
 -----------------------------------------------------------------------------*/
 .middle {
-	padding: 0 0 0 350px; 
+	width: 100%;
 	position: relative;
+}
+.middle {
 	min-height: 100%;
 }
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
 .container {
+	width: 100%;
 	float: left;
 	overflow: hidden;
+}
+.container {
 	padding-bottom: 100px;
 }
-
-
-.list {
-	display: inline-block;
+.content {
+	margin-bottom: 30px;
+}
+.content,
+.menulist,
+.article {
+	padding: 0 0 0 250px;
+}
+.menulist {
+	position: relative;
+	min-height: 320px;
+	padding-bottom: 50px;
+}
+.menulist>.list1,
+.menulist>.list2,
+.menulist>.list3 {
+	position: absolute;
+	width: 250px;
+}
+.list2 {
+	left: 50%; 
+}
+.list3 {
+	 right: 0; 
+}
+.list1, 
+.list2,
+.list3,{
 	margin: 0 50px 15px 0;
 }
-.list-img {
-	float: left;
-	min-width: 200px;
-	max-width: 235px;
-	overflow: hidden;
+.list-img div{
+	display: inline-block;
 	margin-bottom: 20px;
 }
 .img-box {
-	float: left;
 	height: 78px;
 	width: 78px;
 	margin-rihgt:10px;
@@ -109,20 +162,25 @@ strong {
 	height: 100%;
 	width: 100%;
 }
-.list-img p {
-	padding-left: 88px;
+.name {
+	width:160px;
 	vertical-align: top;
 	white-space: pre-line;
+	font-size: 11px;
+	line-height: auto;
 }
 
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
+	position: relative;
+}
+.left-sidebar {
 	font-size: 40px;
 	line-height: 38px;
-	position: absolute;
-	top: 0;
-	left: 0;
 	text-transform: uppercase;
 }
 .left-sidebar a:hover {
@@ -136,20 +194,24 @@ strong {
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	display:inline-block;
-	position: relative;
-	max-width: 100%;
-	min-width: 100%;
 	margin: -100px auto 0;
+	min-width: 1024px;
+	max-width: 1200px;
+	height: 100px;
+	position: relative;
+}
+.footer {
 	border-top: 1px solid rgba(171, 171, 171, 0.5); 
 	line-height: 1.364;
-	padding: 40px 0 30px 0;
+}
+.footer div {
+	position: absolute;
 }
 .footer_block {
-	float: left;
-	padding-right: 20px;
+	padding: 40px 0 40px 0;
 }
-
-
-
+.footer_link {
+	padding: 40px 0 40px 170px;
+	text-align: left;
+}
 
