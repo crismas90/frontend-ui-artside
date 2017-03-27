@@ -1,59 +1,52 @@
-@font-face {
-    font-family: 'DINLightAlternateRegular';
-    src: url('fonts/DINLightAlternateRegular.eot');
-    src: url('fonts/DINLightAlternateRegular.eot') format('embedded-opentype'),
-         url('fonts/DINLightAlternateRegular.woff2') format('woff2'),
-         url('fonts/DINLightAlternateRegular.woff') format('woff'),
-         url('fonts/DINLightAlternateRegular.ttf') format('truetype'),
-         url('fonts/DINLightAlternateRegular.svg#DINLightAlternateRegular') format('svg');
-}
-@font-face {
-    font-family: 'DINCyrRegular';
-    src: url('fonts/DINCyrRegular.eot');
-    src: url('fonts/DINCyrRegular.eot') format('embedded-opentype'),
-         url('fonts/DINCyrRegular.woff2') format('woff2'),
-         url('fonts/DINCyrRegular.woff') format('woff'),
-         url('fonts/DINCyrRegular.ttf') format('truetype'),
-         url('fonts/DINCyrRegular.svg#DINCyrRegular') format('svg');
+@font-face
+{
+	font-style: normal;
+	font-weight: normal;
+	font-family: "DINCyr";
+	src: url("fonts/dincyr-regular.eot?#iefix") format('embedded-opentype'), 
+		url("fonts/dincyr-regular.woff") format("truetype"), 
+		url("fonts/dincyr-regular.otf") format("opentype"), 
+		url("fonts/dincyr-regular.ttf") format("truetype");
 }
 
 html {
 	height: 100%;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, img {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
 }
 body {
-	font-family:'Verdana','DINLightAlternateRegular';
+	font-family: Verdana,Tahoma,sans-serif;
+	font-size: 11px;
 	background-image: url(../gallery/bg-body.jpg);
 	width: 100%;
 	height: 100%;
+	color: #363636;
 }
-h1,h2,a {
-	font-family: 'DINLightAlternateRegular';
-	color: rgb( 54, 54, 54 );
-}
+
 h1,h2 {
+	display: block;
+	font-family: DINCyr, Arial, Tahoma, sans-serif;
 	font-size: 18px;
 	text-transform: uppercase;
 	margin-bottom: 25px;
+	padding: 0;
 	color: #707070;
 }
-p {
-	font-size: 11px;
-	line-height: 15px;
-	margin-bottom: 15px;
-	color: #363636;
-}
+
 a {
 	color: rgb( 112, 112, 112 );
+	text-decoration: underline;
+}
+a:hover
+{
+	text-decoration: none;
 }
 strong {
 	font-weight: bold;
 }
 .wrapper {
-	min-width: 1024px;
-	max-width: 1200px;
+	width: 1000px;
 	margin: 0 auto;
 	min-height: 100%;
 	height: auto !important;
@@ -62,40 +55,37 @@ strong {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	height: 150px;
+	height: 200px;
 }
 .header {
 	position: relative;
-	margin-bottom: 50px;
-}
-.logo,
-.phone,
-.phone span,
-.footer_block ,
-.footer_block span{
 	display: block;
+}
+.header .logo {
+	display: block;
+	position: absolute;
+	top: 44px;
+	left: 0;
+}
+.header .logo img {
+	width: 101px;
+	height: auto;
+}
+
+.header .phone {
+	position: absolute;
+	right: 0;
+	top: 58px;
+	font-size: 30px;
+	font-family: DINCyr, Arial, Tahoma, sans-serif;
+	line-height: 26px;
+	text-decoration: none;
 	color: #707070;
 }
-.phone {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	padding-bottom: 50px;
-}
-.phone a {
-	font-size: 30px;
-	line-height: 26px;
-	font-weight: normal;
-	text-decoration: none;
-}
-.phone span {
+
+.phone-code {
+	display: block;
 	font-size: 18px;
-}
-.logo {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding-bottom: 50px;
 }
 /* Middle
 -----------------------------------------------------------------------------*/
@@ -104,7 +94,8 @@ strong {
 	position: relative;
 }
 .middle {
-	min-height: 100%;
+	padding: 0;
+	padding-bottom: 150px;
 }
 .middle:after {
 	display: table;
@@ -116,52 +107,12 @@ strong {
 	float: left;
 	overflow: hidden;
 }
-.container {
-	padding-bottom: 100px;
-}
 .content {
-	margin-bottom: 30px;
-}
-.content,
-.menulist,
-.article {
 	padding: 0 0 0 250px;
 }
-.menulist {
-	padding-bottom: 50px;
-	min-width: 100%;
+article p {
+	margin-bottom: 15px;
 }
-.list {
-	display: inline-block;
-	vertical-align: top;
-	width: 250px;
-	margin: 0 50px 15px 0;
-}
-.list-img div {
-	display: inline-block;
-	margin-bottom: 20px;
-}
-.img-box {
-	position: relative;
-	height: 78px;
-	width: 78px;
-	margin-rihgt:10px;
-	background: #363636;
-}
-.img-box img {
- 	position: absolute;
-  	top: 0; left: 0; bottom: 0; right: 0;
-	max-height: 100%;
-	max-width: 100%;
-	margin: auto ;
-}
-.name {
-	width:160px;
-	vertical-align: top;
-	white-space: pre-line;
-	font-size: 11px;
-}
-
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
@@ -170,37 +121,108 @@ strong {
 	margin-left: -100%;
 	position: relative;
 }
-.left-sidebar {
+/* Main menu
+-----------------------------------------------------------------------------*/
+.mainmenu {
+	font-family: DINCyr, Arial, Tahoma, sans-serif;
 	font-size: 40px;
 	line-height: 38px;
+	color: #363636;
 	text-transform: uppercase;
 }
-.left-sidebar a:hover {
-	background: #717171;
-	color: #ffffff;
+.menu-list {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-.left-sidebar a {
+.menu-item {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-item a {
+	display: inline;
+	color: inherit;
 	text-decoration: none;
+}
+
+.menu-item a:hover {
+	color: #fff;
+	background: #707070;
+}
+/* Teams
+
+-----------------------------------------------------------------------------*/
+.teams {
+	display: block;
+	font-size: 0px;
+}
+
+.teams .team_group {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 11px;
+	width: 230px;
+}
+.teams .team-group:last-child {
+	margin-right: 0;
+}
+.teams .team_members {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	white-space: normal;
+}
+.teams .member {
+	position: relative;
+	margin: 0 0 10px;
+	padding: 0 0 0 90px;
+	min-height: 78px;
+}
+.teams .photo {
+	width: 78px;
+	height: 78px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #363636;
+}
+.teams .photo img {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	display: block;
+	width: auto;
+	height: 100%;
+	transform: translateX(-50%);
 }
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	margin: -100px auto 0;
-	min-width: 1024px;
-	max-width: 1200px;
-	height: 100px;
+	margin: -101px auto 0;
+	width: 1000px;
+	height: 101px;
 	position: relative;
 }
 .footer {
+	display: block;
 	border-top: 1px solid rgba(171, 171, 171, 0.5); 
 	line-height: 1.364;
+	padding-top: 40px;
+	box-sizing: border-box;
+	color: #707070;
 }
-.footer div {
+.footer .copyright {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: -60px;
-}
-.footer_link {
-	margin-left: 20px;
-}
+	margin-right: 17px;
 
+}
+.footer .footerlink {
+	display: inline-block;
+	vertical-align: top;
+}
